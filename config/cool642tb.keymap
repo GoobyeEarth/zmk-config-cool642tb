@@ -80,10 +80,10 @@
 
         symbol {
             bindings = <
-&kp EXCLAMATION   &kp AT_SIGN       &kp HASH           &kp DOLLAR            &kp PERCENT                                            &kp PLUS   &kp MINUS             &kp ASTERISK  &kp SLASH          &kp EQUAL
-&kp QUESTION      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp A          &kp RIGHT_ALT    &kp LEFT   &kp DOWN              &kp UP_ARROW  &kp RIGHT          &kp TILDE
-&none             &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSPACE  &kp TAB          &kp GRAVE  &kp NON_US_BACKSLASH  &kp COMMA     &kp DOUBLE_QUOTES  &kp MINUS
-&lt 3 LANGUAGE_2  &kp RCTRL         &kp LEFT_WIN       &mo 2                 &kp SPACE              &kp ENTER      &kp RIGHT_SHIFT  &mo 1                                                             &lt 5 LANGUAGE_1
+&kp EXCLAMATION   &kp AT_SIGN       &kp HASH           &kp DOLLAR            &kp PERCENT                                            &kp AMPERSAND  &kp PIPE              &kp CARET     &kp UNDERSCORE     &kp TILDE
+&kp QUESTION      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp A          &kp RIGHT_ALT    &kp LEFT       &kp DOWN              &kp UP_ARROW  &kp RIGHT          &kp TILDE
+&none             &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LESS_THAN         &kp GREATER_THAN       &kp BACKSPACE  &kp TAB          &kp GRAVE      &kp NON_US_BACKSLASH  &kp COMMA     &kp DOUBLE_QUOTES  &kp MINUS
+&lt 3 LANGUAGE_2  &kp RCTRL         &kp LEFT_WIN       &mo 2                 &kp SPACE              &kp ENTER      &kp RIGHT_SHIFT  &mo 1                                                                 &lt 5 LANGUAGE_1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -91,10 +91,10 @@
 
         number {
             bindings = <
-&kp Q             &kp W      &kp E         &kp R  &kp T                                      &kp Y  &kp U  &kp I      &kp O       &kp P
-&kp A             &kp S      &kp D         &kp F  &kp G      &kp A          &kp RIGHT_ALT    &kp H  &kp J  &kp K      &kp L       &mo 4
-&kp Z             &kp X      &kp C         &kp V  &kp B      &kp BACKSPACE  &kp TAB          &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp MINUS
-&lt 3 LANGUAGE_2  &kp RCTRL  &kp LEFT_WIN  &mo 2  &kp SPACE  &kp ENTER      &kp RIGHT_SHIFT  &mo 1                                &lt 5 LANGUAGE_1
+&kp COLON         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA                                   &kp AMPERSAND  &kp PIPE              &kp CARET     &kp UNDERSCORE     &kp TILDE
+&kp PERCENT       &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD  &kp A          &kp RIGHT_ALT    &kp PLUS       &kp MINUS             &kp ASTERISK  &kp SLASH          &kp EQUAL
+&none             &kp N7        &kp N8        &kp N9        &kp N0      &kp BACKSPACE  &kp TAB          &kp GRAVE      &kp NON_US_BACKSLASH  &kp SQT       &kp DOUBLE_QUOTES  &kp MINUS
+&lt 3 LANGUAGE_2  &kp RCTRL     &kp LEFT_WIN  &mo 2         &kp SPACE   &kp ENTER      &kp RIGHT_SHIFT  &mo 1                                                                 &lt 5 LANGUAGE_1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -113,10 +113,10 @@
 
         mouse {
             bindings = <
-&kp Q             &kp W      &kp E         &kp R  &kp T                                      &kp Y  &kp U  &kp I      &kp O       &kp P
-&kp A             &kp S      &kp D         &kp F  &kp G      &kp A          &kp RIGHT_ALT    &kp H  &kp J  &kp K      &kp L       &mo 4
-&kp Z             &kp X      &kp C         &kp V  &kp B      &kp BACKSPACE  &kp TAB          &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp MINUS
-&lt 3 LANGUAGE_2  &kp RCTRL  &kp LEFT_WIN  &mo 2  &kp SPACE  &kp ENTER      &kp RIGHT_SHIFT  &mo 1                                &lt 5 LANGUAGE_1
+&kp Q             &kp W      &kp E         &kp R  &kp T                                      &kp Y  &kp U  &kp I      &kp O      &kp P
+&kp A             &kp S      &kp D         &kp F  &kp G      &kp A          &kp RIGHT_ALT    &kp H  &kp J  &mkp LCLK  &mkp RCLK  &mo 4
+&kp Z             &kp X      &kp C         &kp V  &kp B      &kp BACKSPACE  &kp TAB          &kp N  &kp M  &mkp LCLK  &mkp RCLK  &msc MOVE_X(5)
+&lt 3 LANGUAGE_2  &kp RCTRL  &kp LEFT_WIN  &mo 2  &kp SPACE  &kp ENTER      &kp RIGHT_SHIFT  &mo 1                               &lt 5 LANGUAGE_1
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -170,7 +170,7 @@
             bindings = <
 &kp Q       &kp W    &kp E             &kp R         &kp T                            &kp Y          &kp U  &kp I     &kp O     &kp P
 &kp A       &kp S    &kp D             &kp F         &kp G     &kp N1    &kp N2       &kp H          &kp J  &kp K     &kp L     &kp ENTER
-&kp Z       &kp X    &kp C             &kp V         &kp B     &kp N3    &kp N4       &kp N          &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp Z       &kp X    &kp C             &kp V         &kp B     &kp N3    &kp N4       &kp N          &kp M  &mkp MB1  &mkp MB2  &msc MOVE_X(5)
 &kp ESCAPE  &kp TAB  &kp LEFT_CONTROL  &kp LEFT_GUI  &mkp MB1  &mkp MB2  &lt 8 SPACE  &kp BACKSPACE                             &kp LEFT_SHIFT
             >;
 

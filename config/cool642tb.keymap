@@ -106,11 +106,11 @@
             >;
         };
     };
+};
 
-    &mmv_input_listener {
-        boost_3x {
-            layers = <MOUSEFAST>;
-            input-processors = <&zip_xy_scaler 3 1>;
-        };
+&mmv_input_listener {
+    boost_3x {
+        layers = <MOUSEFAST>;
+        input-processors = <&zip_xy_scaler 3 1>;
     };
 };

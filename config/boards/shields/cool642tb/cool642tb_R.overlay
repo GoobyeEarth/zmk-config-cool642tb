@@ -22,7 +22,7 @@
         device = <&trackball>;
 
         fast_boost {
-            layers = <FAST>;
+            layers = <MOUSE>;
             input-processors = <&zip_xy_scaler 3 1>;
         };
     };

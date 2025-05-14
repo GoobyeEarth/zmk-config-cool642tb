@@ -2,6 +2,7 @@
 #include <input/processors.dtsi>
 #define FUNCTION 3
 #define MOUSE    4
+#define MOUSEDETAIL 5
 
 &default_transform {
     col-offset = <6>;
@@ -23,7 +24,7 @@
         device = <&trackball>;
 
         precision_boost {
-            layers = <MOUSE>;
+            layers = <MOUSEDETAIL>;
             input-processors = <&zip_xy_scaler 1 3>;
         };
 

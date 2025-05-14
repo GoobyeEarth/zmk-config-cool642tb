@@ -5,6 +5,7 @@
 
 #define FUNCTION 3
 #define MOUSE    4
+#define MOUSEDETAIL 5
 
 &mt {
     flavor = "balanced";
@@ -114,12 +115,12 @@
 
 &mmv_input_listener {
     precision_boost {
-        layers = <MOUSE>;
-        input-processors = <&zip_xy_scaler 1 3>;
+        layers = <MOUSEDETAIL>;
+        input-processors = <&zip_xy_scaler 1 2>;
     };
 
     fast_boost {
         layers = <FUNCTION>;
-        input-processors = <&zip_xy_scaler 5 1>;
+        input-processors = <&zip_xy_scaler 3 1>;
     };
 };

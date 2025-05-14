@@ -1,6 +1,7 @@
 #include "cool642tb.dtsi"
 #include <input/processors.dtsi>
-#define MOUSE       4
+#define FUNCTION 3
+#define MOUSE    4
 
 &default_transform {
     col-offset = <6>;
@@ -24,6 +25,11 @@
         precision_boost {
             layers = <MOUSE>;
             input-processors = <&zip_xy_scaler 1 3>;
+        };
+
+        fast_boost {
+            layers = <FUNCTION>;
+            input-processors = <&zip_xy_scaler 5 1>;
         };
     };
 };

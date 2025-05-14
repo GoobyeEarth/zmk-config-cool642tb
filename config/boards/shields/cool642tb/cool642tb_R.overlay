@@ -29,7 +29,7 @@
         };
 
         fast_boost {
-            layers = <MOUSEFAST>;
+            layers = <MOUSE>;
             input-processors = <&zip_xy_scaler 10 1>;
         };
     };

@@ -1,4 +1,8 @@
 #include "cool642tb.dtsi"
+#include <input/processors.dtsi>
+#define MOUSE       4
+#define MOUSEFAST   5
+#define MOUSEPREC   6
 
 &default_transform {
     col-offset = <6>;
@@ -19,6 +23,15 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
+        precision_boost {
+            layers = <MOUSEPREC>;
+            input-processors = <&zip_xy_scaler 1 3>;
+        };
+
+        fast_boost {
+            layers = <MOUSEFAST>;
+            input-processors = <&zip_xy_scaler 3 1>;
+        };
     };
 };
 

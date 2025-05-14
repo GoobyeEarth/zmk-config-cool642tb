@@ -5,6 +5,7 @@
 
 #define MOUSE       4
 #define MOUSEFAST   5
+#define MOUSEPREC   6
 
 &mt {
     flavor = "balanced";
@@ -91,7 +92,7 @@
         mouse {
             bindings = <
 &kp ESCAPE      &none              &mmv MOVE_Y(400)   &none             &none                                   &none           &none      &none      &kp BACKSPACE  &kp DELETE
-&kp TAB         &mmv MOVE_X(-400)  &mmv MOVE_Y(-400)  &mmv MOVE_Y(400)  &none    &kp A           &kp RIGHT_ALT  &none           &none      &mkp LCLK  &mkp RCLK      &none
+&kp TAB         &mmv MOVE_X(-400)  &mmv MOVE_Y(-400)  &mmv MOVE_Y(400)  &none    &kp A           &kp RIGHT_ALT  &none           &none      &mkp LCLK  &mkp RCLK      &mo 6
 &kp Z           &kp X              &kp C              &kp V             &none    &kp LEFT_SHIFT  &none          &kp RC(Z)       &kp LC(X)  &kp LC(C)  &kp LC(V)      &none
 &kp LANGUAGE_2  &none              &kp LEFT_WIN       &kp LCTRL         &kp TAB  &lt 2 SPACE     &lt 1 ENTER    &kp LEFT_SHIFT                                       &lt 5 LANGUAGE_1
             >;
@@ -105,10 +106,22 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
+
+        mouseprec {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 };
 
 &mmv_input_listener {
+    precision_boost {
+        layers = <MOUSEPREC>;
+        input-processors = <&zip_xy_scaler 1 3>;
+    };
+
     boost_3x {
         layers = <MOUSEFAST>;
         input-processors = <&zip_xy_scaler 3 1>;

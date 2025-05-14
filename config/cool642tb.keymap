@@ -106,24 +106,12 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-
-        mouseprec {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 };
 
 &mmv_input_listener {
     precision_boost {
-        layers = <MOUSEPREC>;
-        input-processors = <&zip_xy_scaler 1 3>;
-    };
-
-    boost_3x {
         layers = <MOUSE>;
-        input-processors = <&zip_xy_scaler 10 1>;
+        input-processors = <&zip_xy_scaler 1 3>;
     };
 };

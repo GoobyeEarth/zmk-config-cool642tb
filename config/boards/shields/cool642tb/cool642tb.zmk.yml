@@ -3,6 +3,6 @@ id: cool642tb
 name: cool642tb
 type: shield
 url: https://github.com/telzo2000/zmk-config-cool642tb
-requires: [xiao_ble]
+requires: [seeeduino_xiao_ble]
 features:
   - keys
